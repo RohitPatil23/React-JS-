@@ -14,7 +14,10 @@ function PersonList() {
     { id: 3, name: "Diana", age: 28, skill: "Vue" },
   ];
   // person as a parameter which is passed as the prop to the person component
-  const PersonList = persons.map((person) => <Person person={person}></Person>);
+  //Each child in a list should have a unique "key" prop
+  const PersonList = persons.map((person) => (
+    <Person key={person.id} person={person}></Person>
+  ));
   return <div>{PersonList}</div>;
 }
 
