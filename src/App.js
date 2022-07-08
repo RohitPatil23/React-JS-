@@ -1,4 +1,5 @@
 //import logo from './logo.svg';
+import React,{Component}from "react";
 import "./App.css";
 import Greet from "./components/Greet";
 import Welcome from "./components/Welcome";
@@ -14,12 +15,17 @@ import NameList from "./components/NameList";
 import PersonList from "./components/NameList";
 import Stylesheet from "./components/Stylesheet";
 import Inline from "./components/Inline";
+import "./appStyles.css";
+import styles from "./appStyles.modules.css";
 
-function App() {
+class App extends Component {
+  render() {
   return (
     <div className="App">
-     
-      <Inline />
+      <h1 className="error">Error</h1>
+      <h1 className={styles.success}>success</h1>
+
+      {/* <Inline /> */}
       {/* <Stylesheet primary={false}/> */}
       {/* <PersonList /> */}
       {/* <NameList /> */}
@@ -64,6 +70,7 @@ function App() {
       <Welcome name="Bruce" heroName="Batman"/> */}
     </div>
   );
+    }
 }
 
 export default App;
